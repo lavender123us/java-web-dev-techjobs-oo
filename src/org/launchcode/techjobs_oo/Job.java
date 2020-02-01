@@ -97,11 +97,18 @@ public class Job {
 
     @Override
     public String toString() {
-        return "ID: _____ " + getId() + "\n" +
-                "Name: _____ " + this.name + "\n" +
-                "Employer: _____ " + this.employer + "\n" +
-                "Location: _____ " + this.location + "\n" +
-                "Position Type: _____ " + this.positionType + "\n" +
-                "Core Competency: _____ " + this.coreCompetency;
+        return "ID: " + getId() + "\n" +
+                "Name: " + this.name + "\n" +
+                "Employer: " + this.employer + "\n" +
+                "Location: " + this.location + "\n" +
+                "Position Type: " + this.positionType + "\n" +
+                "Core Competency: " + this.coreCompetency + "\n\n";
+
+//        return "ID: _____ " + getId() + "\n" +
+//                "Name: _____ " + this.name + "\n" +
+//                "Employer: _____ " + this.employer + "\n" +
+//                "Location: _____ " + this.location + "\n" +
+//                "Position Type: _____ " + this.positionType + "\n" +
+//                "Core Competency: _____ " + this.coreCompetency;
     }
 }
