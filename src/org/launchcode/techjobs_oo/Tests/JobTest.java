@@ -1,8 +1,10 @@
 package org.launchcode.techjobs_oo.Tests;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
+import static java.lang.System.*;
 import static org.junit.Assert.*;
 
 public class JobTest {
@@ -35,6 +37,26 @@ public class JobTest {
         Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(job4 == job5);
+    }
+
+    @Test
+    public void testIfReturnedStringsWithLines() {
+        Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String print = "ID: _____ 1\nName: _____ Product tester\nEmployer: _____ ACME\n" +
+                        "Location: _____ Desert\nPosition Type: _____ Quality control\nCore Competency: _____ Persistence";
+
+        assertEquals(job6.toString(), print);
+    }
+
+    @Test
+    public void testReturnMessage() {
+        Job job7 = new Job("Product tester", new Employer(""), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        if (job7.getName() == null || job7.getEmployer() == null || job7.getLocation() == null ||
+                job7.getPositionType() == null || job7.getCoreCompetency() == null) {
+            System.out.println("Data not available");
+        }
     }
 
 }
