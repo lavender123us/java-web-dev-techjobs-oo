@@ -1,10 +1,8 @@
 package org.launchcode.techjobs_oo.Tests;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
-import static java.lang.System.*;
 import static org.junit.Assert.*;
 
 public class JobTest {
@@ -29,7 +27,6 @@ public class JobTest {
         assertEquals(true, result);
     }
 
-
     @Test
     public void testJobsForEquality() {
         Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
@@ -43,7 +40,7 @@ public class JobTest {
     public void testIfReturnedStringsWithLines() {
         Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String print = "ID: _____ 1\nName: _____ Product tester\nEmployer: _____ ACME\n" +
+        String print = "ID: _____ 6\nName: _____ Product tester\nEmployer: _____ ACME\n" +
                         "Location: _____ Desert\nPosition Type: _____ Quality control\nCore Competency: _____ Persistence";
 
         assertEquals(job6.toString(), print);
