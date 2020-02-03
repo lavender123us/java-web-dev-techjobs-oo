@@ -97,12 +97,56 @@ public class Job {
 
     @Override
     public String toString() {
-        return "ID: " + getId() + "\n" +
-                "Name: " + this.name + "\n" +
-                "Employer: " + this.employer + "\n" +
-                "Location: " + this.location + "\n" +
-                "Position Type: " + this.positionType + "\n" +
-                "Core Competency: " + this.coreCompetency + "\n\n";
+        String ifEmpty = "Data not available";
+
+       if (name.equals("")) {
+           return "ID: " + id + "\n" +
+                   "Name: " + ifEmpty + "\n" +
+                   "Employer: " + employer + "\n" +
+                   "Location: " + location + "\n" +
+                   "Position Type: " + positionType + "\n" +
+                   "Core Competency: " + coreCompetency + "\n\n";
+
+       } if (employer.toString().equals("")) {
+            return "ID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + ifEmpty + "\n" +
+                    "Location: " + location + "\n" +
+                    "Position Type: " + positionType + "\n" +
+                    "Core Competency: " + coreCompetency + "\n\n";
+
+       } if (location.toString().equals("")) {
+           return "ID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + employer + "\n" +
+                    "Location: " + ifEmpty + "\n" +
+                    "Position Type: " + positionType + "\n" +
+                    "Core Competency: " + coreCompetency + "\n\n";
+
+       } if (positionType.toString().equals("")) {
+            return "ID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + employer + "\n" +
+                    "Location: " + location + "\n" +
+                    "Position Type: " + ifEmpty + "\n" +
+                    "Core Competency: " + coreCompetency + "\n\n";
+
+       } if (coreCompetency.toString().equals("")) {
+            return "ID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + employer + "\n" +
+                    "Location: " + location + "\n" +
+                    "Position Type: " + positionType + "\n" +
+                    "Core Competency: " + ifEmpty + "\n\n";
+       } else {
+            return "ID: " + id + "\n" +
+                    "Name: " + name + "\n" +
+                    "Employer: " + employer + "\n" +
+                    "Location: " + location + "\n" +
+                    "Position Type: " + positionType + "\n" +
+                    "Core Competency: " + coreCompetency + "\n\n";
+       }
+    }
 
 //        return "ID: _____ " + getId() + "\n" +
 //                "Name: _____ " + this.name + "\n" +
@@ -110,5 +154,4 @@ public class Job {
 //                "Location: _____ " + this.location + "\n" +
 //                "Position Type: _____ " + this.positionType + "\n" +
 //                "Core Competency: _____ " + this.coreCompetency;
-    }
 }

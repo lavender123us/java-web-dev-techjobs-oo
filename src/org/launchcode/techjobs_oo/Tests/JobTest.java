@@ -40,22 +40,23 @@ public class JobTest {
     public void testIfReturnedStringsWithLines() {
         Job job6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//        String print = "ID: _____ 6\nName: _____ Product tester\nEmployer: _____ ACME\n" +
+//        String print = "ID: _____ 1\nName: _____ Product tester\nEmployer: _____ ACME\n" +
 //                        "Location: _____ Desert\nPosition Type: _____ Quality control\nCore Competency: _____ Persistence";
-        String print = "ID: 1\nName: Product tester\nEmployer: ACME\n" +
+        String print = "ID: 6\nName: Product tester\nEmployer: ACME\n" +
                 "Location: Desert\nPosition Type: Quality control\nCore Competency: Persistence" + "\n\n";
 
-        assertEquals(job6.toString(), print);
+        assertEquals(print, job6.toString());
     }
+
 
     @Test
     public void testReturnMessage() {
         Job job7 = new Job("Product tester", new Employer(""), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        if (job7.getName() == null || job7.getEmployer() == null || job7.getLocation() == null ||
-                job7.getPositionType() == null || job7.getCoreCompetency() == null) {
-            System.out.println("Data not available");
-        }
+        String print = "ID: 5\nName: Product tester\nEmployer: Data not available\n" +
+                "Location: Desert\nPosition Type: Quality control\nCore Competency: Persistence" + "\n\n";
+
+        assertEquals(print, job7.toString());
     }
 
 }
